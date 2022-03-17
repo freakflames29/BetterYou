@@ -1,0 +1,11 @@
+<h2>Login to your account</h2>
+<%= form_for :session, url:login_path do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username,placeholder:'Your username',autofocus:true,required:true %> <br><br>
+
+  <%= f.label :password %>
+  <%= f.password_field :password ,placeholder:'Your passowrd',required:true %>
+
+  <%= f.submit 'Login' %>
+
+<% end %>
