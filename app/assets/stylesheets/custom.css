@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root
+{
+	--base-color:#FF9F45 ;
+	--base-color-dark:#f76e11 ;
+	--black: #262626;
+	--light-bg: #ff9a56;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter',arial;
+	color: var(--black);
+}
+a
+{
+	text-decoration: none;
+	color: inherit;
+}
+.container{
+	margin: 10px 15px;
+}
+.nav__container
+{
+	width: 100%;
+	/*background-color: blue;*/
+	display: flex;
+	padding: 10px;
+	min-height: 25px;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+}
+.nav__logo
+{
+	width: 40%;
+	/*border: 2px solid;*/
+	display: flex;
+	/*justify-content:space-evenly;*/
+	align-items: baseline;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.nav__logo h1
+{
+	font-size: 50px;
+	color:var(--base-color-dark);
+	font-weight: 900;
+}
+.nav__elem
+{
+	width: 60%;
+	display: flex;
+	justify-content:space-evenly;
+	align-items: baseline;
+
+}
+.nav__elem__items
+{
+	font-size: 20px;
+	margin-top: 10px;
+	margin-right: 25px;
+
+}
+.btn
+{
+	border: 2px solid var(--base-color-dark);
+	color: var(--black);
+	border-radius: 5px;
+	padding: 9px 15px;
+	background-color: var(--base-color);
+	box-shadow: 0px 3px 0px var(--base-color-dark) ;
+	font-weight: 500;
+	cursor: pointer;
+}
+.hero__container
+{
+	display: flex;
+	width: 100%;
+	min-width: 100vh;
+}
+.hero__left{
+	min-width: 60%;
+	padding: 150px 10px;
+}
+.hero__left h1
+{
+	font-size: 50px;
+	color: var(--base-color-dark);
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.hero__left h2
+{
+	margin-bottom: 20px;
+}
+.hero__right
+{
+	width: 40%;
+}
+.hero__img
+{
+	width: 100%;
+}
+.form__container
+{
+	margin: 50px 200px;
+	padding: 20px;
+	display: flex;
+	flex-direction:column ;
+	/*justify-content: center;*/
+	align-items: center;
+}
+.form__container h1
+{
+	font-size: 40px;
+	color: var(--base-color-dark);
+}
+.form__control
+{
+	display: block;
+	margin-bottom: 10px;
+}
+.form__field
+{
+	font-size: 20px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: 2px solid var(--base-color);
+	outline: none;
+}
+.label
+{
+	font-size: 18px ;
+	font-weight: 600;
+}
+.form__container .btn
+{
+	font-size: 20px;
+	width: 100%;
+}
+.form__field:focus
+{
+	border: 2px solid var(--base-color-dark);
+	box-shadow: 0px 3px 0px var(--base-color-dark) ;
+
+}
+
+.errors__container
+{
+	margin: 50px 200px;
+}
+.errors
+{
+	padding: 30px 20px;	
+	background-color: var(--light-bg);
+	border-radius: 5px;
+	border: 2px solid var(--base-color-dark);
+
+}
+.errors__h1
+{
+	margin-bottom: 10px;
+
+}

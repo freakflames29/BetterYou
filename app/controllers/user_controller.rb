@@ -1,6 +1,7 @@
 class UserController < ApplicationController
   before_action :redirec_if_loggedin,except:[:edit,:update]
   before_action :require_user ,only:[:edit,:update]
+  before_action :same_user ,only:[:edit]
   
   def index; end
 
@@ -54,5 +55,12 @@ class UserController < ApplicationController
   def filter_params_for_edit
      params.require(:user).permit(:email, :name, :username, :password, :password_confirmation,:show_name)
   end
-  
+
+  def same_user
+    @user=User.find params[:id]
+    if !@user.eql?(current_user)
+      flash[:notice]="You can't perform that action"
+      redirect_to root_path
+    end
+  end
 end

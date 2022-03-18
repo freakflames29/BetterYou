@@ -1,0 +1,14 @@
+<div class="errors__container">
+  
+
+<% if @user.errors.any? %>
+  <div class="errors">
+    
+  <h1 class="errors__h1"><i class="fa-solid fa-triangle-exclamation"></i> Oops! there is something wrong.</h1>
+  <% @user.errors.full_messages.each do |msg| %>
+    <h3> <i class="fa-solid fa-exclamation"></i> ) <%= msg %></h3>
+  <% end %>
+
+<% end %>
+  </div>
+</div>

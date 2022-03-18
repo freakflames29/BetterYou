@@ -1,15 +1,14 @@
-<h1>Hi mom</h1>
-<% if logged_in? %>
-  <%= link_to 'Logout ',logout_path,method: :delete %>
-<% else %>
-  <%= link_to 'Login',login_path %>
-<% end %>
-<hr>
+<div class="hero__container">
+  <div class="hero__left">
+    <h1>Make Your self better everyday</h1>
+    <h2>Better you gives you challenge everyday and you have to win the challege </h2>
+    <%= link_to 'Get started',logout_path,method: :delete ,class:'btn'%> 
+         
+  </div>
 
-<% @users.each do |user| %>
-  <% if user.show_name %>
-    <%= user.name %> <br>
-  <% else %>
-    anonymous <br>
-  <% end %>
-<% end %>
+  <div class="hero__right">
+    <%= image_tag 'hero.jpg' ,class:'hero__img'%>
+  </div>
+
+
+</div>
