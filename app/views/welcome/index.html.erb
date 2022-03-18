@@ -5,10 +5,11 @@
   <%= link_to 'Login',login_path %>
 <% end %>
 <hr>
+
 <% @users.each do |user| %>
   <% if user.show_name %>
-      <%= user.name %> <br>
+    <%= user.name %> <br>
   <% else %>
-      anonymous <br>
+    anonymous <br>
   <% end %>
 <% end %>
