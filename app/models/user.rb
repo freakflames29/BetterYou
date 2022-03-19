@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  belongs_to :user_showname
   has_many :user_tasks
   has_many :tasks,through: :user_tasks
   has_secure_password

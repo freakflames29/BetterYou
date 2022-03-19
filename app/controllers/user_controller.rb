@@ -1,9 +1,21 @@
 class UserController < ApplicationController
-  before_action :redirec_if_loggedin,except:[:edit,:update]
-  before_action :require_user ,only:[:edit,:update]
+  before_action :redirec_if_loggedin,except:[:edit,:update,:show]
+  before_action :require_user ,only:[:edit,:update,:show]
   before_action :same_user ,only:[:edit]
+
+  def show_name
+    show=UserShowname.find_by(user:current_user).show_name
+   @usershowname=UserShowname user:current_user,show_name: !show
+   @usershowname.save
+  end
+
   
   def index; end
+
+  def show
+    @user=User.find params[:id]
+    @is_show_name=UserShowname.find_by user:@user
+  end
 
   def new
     @user = User.new
@@ -48,7 +60,7 @@ class UserController < ApplicationController
   private
 
   def filter_params
-    params.require(:user).permit(:email, :name, :username, :password, :password_confirmation)
+    params.require(:user).permit(:email, :name, :username, :password, :password_confirmation,:gender)
   end
 
 

@@ -1,0 +1,13 @@
+<!-- <%#if @task.status.eql?('pending') && @task.user.eql?(current_user) %> -->
+	<%#= @task.task_name %>
+	<%#= @task.points %>
+<% if @challenge %>
+	
+	<%= @challenge.inspect %>
+<br><br>
+	<%= @challenge.task.task_name %>
+	<%= @challenge.task.points %>
+	<% else %>
+	<h2>You don't have any task now</h2>
+<% end %>
+<%# end %>

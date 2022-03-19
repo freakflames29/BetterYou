@@ -1,8 +1,36 @@
 <div class="form__container">
   <h1><%= title %></h1>
   <hr>
+
+<% if path !=nil %>
   
 <%= form_for @user,url: path,class:'form' do |f| %>
+  <%= f.label :name,class:'form__control label' %>
+  <%= f.text_field :name,placeholder:'Enter your name',required:true,class:'form__control form__field' %>
+
+  <%= f.label :username,class:'form__control label' %>
+  <%= f.text_field :username,placeholder:'Enter your username',required:true ,class:'form__control  form__field'%> 
+
+  <%= f.label :email,class:'form__control label' %>
+  <%= f.text_field :email,placeholder:'Enter your email',required:true,class:'form__control form__field' %> 
+
+  <%= f.label :password,class:'label'%> <em class="form__control label">(minimum password length 6)</em>
+  <%= f.password_field :password,placeholder:'Enter your password',required:true ,class:'form__control form__field'%> 
+  <%= f.label :password_confirmation,"Confirm password",class:'form__control label' %>
+  <%= f.password_field :password_confirmation,placeholder:'Confirm your password',required:true ,class:'form__control form__field'%> 
+
+
+  <%= f.label :gender,class:'label' %> 
+  <%= f.radio_button :gender ,'MALE',checked:true,required:true %> <span class="radio__label">Male</span>
+  <%= f.radio_button :gender ,'FEMALE',required:true %> <span class="radio__label">Female</span >
+
+  <%= f.submit 'Signup',class:'btn submit' %>
+
+<% end %>
+</div>
+
+<% else %>
+<%= form_for @user,class:'form' do |f| %>
   <%= f.label :name,class:'form__control label' %>
   <%= f.text_field :name,placeholder:'Enter your name',required:true,class:'form__control form__field' %>
 
@@ -20,4 +48,4 @@
   <%= f.submit 'Signup',class:'btn submit' %>
 
 <% end %>
-</div>
+<% end %>
