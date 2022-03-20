@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   delete 'logout',to:'session#destroy'
 
   get 'todayschallenge',to:'welcome#today_task'
+
+  post 'user/:id/hidename',to:'user#hide_name',as:'hidename'
 end

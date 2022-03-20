@@ -1,5 +1,5 @@
 <div class="show__container">
-	<% if !User.find(params[:id]).eql?(current_user) %>
+	<% if User.find(params[:id]).eql?(current_user) %>
 		
 	<div class="show__right__section">
 		<div class="info__table">
@@ -8,7 +8,12 @@
 			    <td><%= link_to 'Edit account',edit_user_path(params[:id]) %></td>
 			   </tr>
 			  <tr>
-			    <td>Centro comercial Moctezuma</td>
+			  	<% if @is_show_name.show_name %>
+				    <td><%= link_to 'Hide your name' ,hidename_path,method: :post%></td>
+			    <% else %>
+				    <td><%= link_to 'Show your name' ,hidename_path,method: :post%></td>
+			  		
+			  	<% end %>
 			    
 			  </tr>
 			</table>
@@ -24,17 +29,32 @@
 
 	<div class="show__left__section">
 		<div class="user_info_container">
-			
-			<%= image_tag 'boy.jpg',alt:'icon',class:'profile__img'	%>
-			<% if @is_show_name.show_name %>
+
+			<% if @user.gender.eql?('MALE') %>
+				<%= image_tag 'boy.jpg',alt:'icon',class:'profile__img'	%>
+				<% else %>
+				<%= image_tag 'girl.jpg',alt:'icon',class:'profile__img'	%>
 				
-				<p>@<%= @user.username %></p>
-				<h2><%= @user.name.capitalize %></h2>
-				<p><%= @user.email %></p>
-			<% else %>
-				<h2>Anonymous</h2>
 			<% end %>
+				<% if @is_show_name.show_name %>
+					
+					<p>@<%= @user.username %></p>
+					<h2><%= @user.name.capitalize %></h2>
+					<p><%= @user.email %></p>
+				<% else %>
+					<% if User.find(params[:id]).eql?(current_user) %>
+							<span class="badge small-badge">Your name is hidden</span>
+
+							<p>@<%= @user.username %></p>
+							<h2><%= @user.name.capitalize %></h2>
+							<p><%= @user.email %></p>
+					<% else %>
+						<h2>Anonymous</h2>
+					<% end %>
+
+				<% end %>
 			<span class="badge points">Points: <%= @user.points %></span>
+
 		</div>
 	</div>
 

@@ -1,7 +1,7 @@
 class UserController < ApplicationController
-  before_action :redirec_if_loggedin,except:[:edit,:update,:show]
-  before_action :require_user ,only:[:edit,:update,:show]
-  before_action :same_user ,only:[:edit]
+  before_action :redirec_if_loggedin,except:[:edit,:update,:show,:hide_name]
+  before_action :require_user ,only:[:edit,:update,:show,:hide_name]
+  before_action :same_user ,only:[:edit,:hide_name]
 
   def show_name
     show=UserShowname.find_by(user:current_user).show_name
@@ -9,6 +9,13 @@ class UserController < ApplicationController
    @usershowname.save
   end
 
+  def hide_name
+    username=UserShowname.find_by user:current_user
+    username.toggle(:show_name)
+    if username.save
+      redirect_to user_path current_user
+    end
+  end
   
   def index; end
 
@@ -27,6 +34,7 @@ class UserController < ApplicationController
       password_length = @user.password.size
       if password_length >= 6
         if @user.save
+          UserShowname.create! user:@user
           flash[:danger] = 'You are successfully signed up'
           redirect_to login_path
         end
@@ -65,7 +73,7 @@ class UserController < ApplicationController
 
 
   def filter_params_for_edit
-     params.require(:user).permit(:email, :name, :username, :password, :password_confirmation,:show_name)
+     params.require(:user).permit(:email, :name, :username, :password, :password_confirmation)
   end
 
   def same_user

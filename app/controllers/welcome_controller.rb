@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+  before_action :require_user ,only:[:today_task]
   def index; end
 
   def gen_random_task

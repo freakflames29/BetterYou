@@ -251,3 +251,18 @@ td {
 	width: 100%;
 
 }
+.badge-btn
+{
+	font-size: 15px;
+	background-color: var(--black);
+	color: var(--base-color-dark);
+
+}
+.small-badge
+{
+	font-size: 13px;
+	padding: 7px 8px;
+	margin-bottom: 10px;
+	color: var(--base-color-dark);
+	background-color: var(--black);
+}
