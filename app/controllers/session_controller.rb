@@ -7,17 +7,17 @@ class SessionController < ApplicationController
       @user=User.find_by username:params[:session][:username]
 
       if @user && @user.authenticate(params[:session][:password])
-        flash[:succ]='You are logged in '
+        flash[:ok]='You are logged in!'
         redirect_to @user
         session[:user_id]=@user.id
 
       else
-        flash[:fail]='Wrong crendentials'
+        flash[:fail]='Wrong crendentials!'
         render :new
       end
   end
   def destroy
-    flash[:notice] = "you are logged out"
+    flash[:notice] = "You are logged out!"
     session[:user_id]=nil
     redirect_to root_path
   end

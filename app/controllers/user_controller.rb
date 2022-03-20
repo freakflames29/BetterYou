@@ -35,11 +35,11 @@ class UserController < ApplicationController
       if password_length >= 6
         if @user.save
           UserShowname.create! user:@user
-          flash[:danger] = 'You are successfully signed up'
+          flash[:ok] = 'You are successfully signed up'
           redirect_to login_path
         end
       else
-        flash[:danger] = 'Password is too small'
+        flash[:fail] = 'Password is too small'
         render :new
       end
     else
@@ -79,7 +79,7 @@ class UserController < ApplicationController
   def same_user
     @user=User.find params[:id]
     if !@user.eql?(current_user)
-      flash[:notice]="You can't perform that action"
+      flash[:fail]="You can't perform that action"
       redirect_to root_path
     end
   end

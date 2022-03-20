@@ -266,3 +266,31 @@ td {
 	color: var(--base-color-dark);
 	background-color: var(--black);
 }
+.flash{
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+    margin-top: 13px;
+}
+.flashh2
+{
+
+	color: #fff;
+}
+.ok
+{
+	background-color: #3E7C17;
+	border: 2px solid #125C13;
+}
+.fail
+{
+	background-color: #F23A3A;
+	border: 2px solid #C9182B;
+	color: #fff;
+}.notice
+{
+	background-color: #FFB26B;
+	border: 2px solid #C85C5C;
+	color: #000;
+}
