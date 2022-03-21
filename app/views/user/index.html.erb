@@ -1,0 +1,18 @@
+<div class="users_container">
+	<% @users.each do |user| %>
+		
+	
+	<div class="users">
+		<% if UserShowname.find_by(user:user).show_name %>
+			<p> <b class='basecolor'> @<%=user.username %> </b></p>
+			<% else %>
+			<p> <b class='basecolor'> @Anonymous</b></p>
+			
+		<% end %>
+		<h2><%= user.tasks.last.task_name.capitalize %></h2>
+		<span class="small-badge badge status_badge"><%= UserTask.where(user:user).last.status %></span >
+	</div>
+
+	<% end %>
+
+</div>

@@ -33,8 +33,9 @@ class WelcomeController < ApplicationController
 
           @challenge=nil
 
-        else
-          gen_random_task
+        elsif task_list_of_user.last.status.eql?('canceled') && (task_list_of_user.last.created_at.to_date.eql?(task_list_of_user.last.updated_at.to_date))
+          
+            @challenge=nil
 
         end
 

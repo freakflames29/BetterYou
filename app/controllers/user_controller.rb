@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  before_action :redirec_if_loggedin,except:[:edit,:update,:show,:hide_name]
+  before_action :redirec_if_loggedin,except:[:edit,:update,:show,:hide_name,:index]
   before_action :require_user ,only:[:edit,:update,:show,:hide_name]
   before_action :same_user ,only:[:edit,:hide_name]
 
@@ -17,7 +17,9 @@ class UserController < ApplicationController
     end
   end
   
-  def index; end
+  def index
+    @users=User.all
+  end
 
   def show
     @user=User.find params[:id]

@@ -8,12 +8,12 @@
 		<div class="task_button">
 		
 		<%= link_to 'I WON',win_path,method: :post,class:'btn button ok' %>
-		<%= link_to 'I FAILED',root_path,class:'btn button fail' %>
+		<%= link_to 'I FAILED',lose_path,method: :post,class:'btn button fail' %>
 			
 		</div>
 	</div>
 	<% else %>
 	<div class="task_container">
-		<h3><%= current_user.username %> you don't have any task now</h3>
+		<h3><%= current_user.username %> you don't have any challenge now</h3>
 	</div>
 <% end %>
