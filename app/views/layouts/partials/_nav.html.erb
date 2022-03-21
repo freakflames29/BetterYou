@@ -1,22 +1,24 @@
+<% up=UserPoint.find_by user:current_user %>
+
 <nav>
-	<div class="nav__container">
-		
-	<div class="nav__logo">
-		<h1>
-				<%= link_to 'Better You',root_path %>
-		</h1>
-	</div>
-	<div class="nav__elem">
-		<% if logged_in? %>
-		<%= link_to 'Your Profile' ,current_user,class:'nav__elem__items' %>
-			
-		<% end %>
-		<span class="nav__elem__items">Users</span>
-		<%= link_to "Today's challenge",todayschallenge_path,class:'nav__elem__items' %>
-		<span class="nav__elem__items btn"><i class="fa-solid fa-user-plus"></i> <%= link_to 'Signup',signup_path %> </span>
-		<span class="nav__elem__items btn"><i class="fa-solid fa-lock"></i> <%= link_to 'Login',login_path %></span>
-	</div>
-
-	</div>
+  <div class="nav__container">
+    <div class="nav__logo">
+      <h1>
+        <%= link_to 'Better You',root_path %>
+      </h1>
+    </div>
+    <div class="nav__elem">
+      <% if logged_in? %>
+        <%= link_to 'Your Profile' ,current_user,class:'nav__elem__items' %>
+      <% end %>
+      <span class="nav__elem__items">Users</span>
+      <%= link_to "Today's challenge",todayschallenge_path,class:'nav__elem__items' %>
+      <% if logged_in? %>
+        <span class="nav__elem__items btn"> <i class="fa-solid fa-star"></i> Points: <%= up.points %> </span>
+      <% else %>
+        <span class="nav__elem__items btn"><i class="fa-solid fa-user-plus"></i> <%= link_to 'Signup',signup_path %> </span>
+        <span class="nav__elem__items btn"><i class="fa-solid fa-lock"></i> <%= link_to 'Login',login_path %></span>
+      <% end %>
+    </div>
+  </div>
 </nav>
-

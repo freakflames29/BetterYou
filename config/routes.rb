@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   get 'todayschallenge',to:'welcome#today_task'
 
   post 'user/:id/hidename',to:'user#hide_name',as:'hidename'
+
+
+  post 'win',to:'task#win'
+  post 'lose',to:'task#lose'
 end

@@ -1,13 +1,19 @@
-<!-- <%#if @task.status.eql?('pending') && @task.user.eql?(current_user) %> -->
-	<%#= @task.task_name %>
-	<%#= @task.points %>
+<!-- <h1> Hi <span class='username'><%= current_user.username %></span>, here is your challenge</h1> -->
 <% if @challenge %>
 	
-	<%= @challenge.inspect %>
-<br><br>
-	<%= @challenge.task.task_name %>
-	<%= @challenge.task.points %>
+	<div class="task_container" id="taskdiv">
+		<b> Hi <span class='username'><%= current_user.username %></span>, here is your challenge</b>
+		<h1><%= @challenge.task.task_name.capitalize %></h1>
+		<h2> <i class="fa-solid fa-star whitecolor"></i> <%= @challenge.task.points %></h2>
+		<div class="task_button">
+		
+		<%= link_to 'I WON',win_path,method: :post,class:'btn button ok' %>
+		<%= link_to 'I FAILED',root_path,class:'btn button fail' %>
+			
+		</div>
+	</div>
 	<% else %>
-	<h2>You don't have any task now</h2>
+	<div class="task_container">
+		<h3><%= current_user.username %> you don't have any task now</h3>
+	</div>
 <% end %>
-<%# end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_19_160510) do
+ActiveRecord::Schema.define(version: 2022_03_20_171023) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "task_name"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2022_03_19_160510) do
     t.string "points", default: "10"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_points", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "points", default: "0"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_user_points_on_user_id"
   end
 
   create_table "user_shownames", force: :cascade do |t|
@@ -49,6 +57,7 @@ ActiveRecord::Schema.define(version: 2022_03_19_160510) do
     t.string "gender"
   end
 
+  add_foreign_key "user_points", "users"
   add_foreign_key "user_shownames", "users"
   add_foreign_key "user_tasks", "tasks"
   add_foreign_key "user_tasks", "users"

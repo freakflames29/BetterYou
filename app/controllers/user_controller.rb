@@ -22,6 +22,7 @@ class UserController < ApplicationController
   def show
     @user=User.find params[:id]
     @is_show_name=UserShowname.find_by user:@user
+    @user_point=UserPoint.find_by user:@user
   end
 
   def new
@@ -35,6 +36,7 @@ class UserController < ApplicationController
       if password_length >= 6
         if @user.save
           UserShowname.create! user:@user
+          UserPoint.create! user:@user
           flash[:ok] = 'You are successfully signed up'
           redirect_to login_path
         end

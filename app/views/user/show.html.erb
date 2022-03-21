@@ -16,6 +16,9 @@
 			  	<% end %>
 			    
 			  </tr>
+			  <tr>
+ 			  	<td><%= link_to 'Logout',logout_path,method: :delete %></td>
+			  </tr>
 			</table>
 		</div>
 	</div>
@@ -38,24 +41,24 @@
 			<% end %>
 				<% if @is_show_name.show_name %>
 					
-					<p>@<%= @user.username %></p>
-					<h2><%= @user.name.capitalize %></h2>
-					<p><%= @user.email %></p>
+					<b>@<%= @user.username %></b>
+					<h2 class="dark-orange-color"><%= @user.name.capitalize %></h2> <br>
+					<p><i class="fa-solid fa-envelope"></i> <%= @user.email %></p><br>
 				<% else %>
 					<% if User.find(params[:id]).eql?(current_user) %>
 							<span class="badge small-badge">Your name is hidden</span>
 
-							<p>@<%= @user.username %></p>
-							<h2><%= @user.name.capitalize %></h2>
-							<p><%= @user.email %></p>
+							<b>@<%= @user.username %></b>
+							<h2 class="dark-orange-color"><%= @user.name.capitalize %></h2> <br>	
+							<p><i class="fa-solid fa-envelope"></i> <%= @user.email %></p><br>
 					<% else %>
 						<h2>Anonymous</h2>
 					<% end %>
 
 				<% end %>
-			<span class="badge points">Points: <%= @user.points %></span>
+			<span class="badge points"><i class="fa-solid fa-star"></i> Points: <%= @user_point.points %></span>
 
-		</div>
+		</div>	
 	</div>
 
 
