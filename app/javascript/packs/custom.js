@@ -1,15 +1,26 @@
-let showbtn=document.getElementById('show_button');
-eve()
+// let showbtn=document.getElementById('show_button');
+// eve()
+// function eve()
+// {
+// 	showbtn.addEventListener('click',showtask)
+// }
+// function showtask()
+// {
+// 	let div=document.getElementById('taskdiv');
+
+// 	showbtn.classList.add('hidden');
+// 	div.classList.remove('hidden');
+// }
+
+// console.log('hi')
+console.log('hi')
+eve();
+
 function eve()
 {
-	showbtn.addEventListener('click',showtask)
-}
-function showtask()
-{
-	let div=document.getElementById('taskdiv');
-
-	showbtn.classList.add('hidden');
-	div.classList.remove('hidden');
+	document.querySelector("body > div.container > div.flash > span > i").addEventListener('click',close)
 }
 
-console.log('hi')
+  function close() {
+    document.querySelector("body > div.container > div.flash").remove();
+  }

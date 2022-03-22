@@ -61,10 +61,7 @@ a
 	margin-right: 25px;
 
 }
-.nav__elem__items:hover
-{
-	color: var(--base-color-dark);
-}
+
 .btn
 {
 	border: 2px solid var(--base-color-dark);
@@ -121,6 +118,7 @@ a
 {
 	font-size: 40px;
 	color: var(--base-color-dark);
+	margin-bottom: 15px;
 }
 .form__control
 {
@@ -277,6 +275,8 @@ td {
     width: 80%;
     margin: auto;
     margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
 }
 .flashh2
 {
@@ -458,4 +458,29 @@ td {
 	color: var(--base-color-dark);
 	font-size: 25px;
 	margin-bottom: 15px;
+}
+.crossbtn
+{
+	font-size: 28px;
+	text-align: center;
+	cursor: pointer;
+}
+.second__heroleft
+{
+	width: 40%;
+}
+.second__heroright
+{
+	width: 60%;
+	margin: auto;
+	margin-right: 20px;
+}
+.second__heroright img
+{
+	box-shadow: 2px 5px 6px #0000006e;
+	transition: 0.5s ease;
+}
+.second__heroright img:hover
+{
+	transform: scale(1.05);
 }
