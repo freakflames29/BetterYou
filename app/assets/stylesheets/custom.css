@@ -61,6 +61,10 @@ a
 	margin-right: 25px;
 
 }
+.nav__elem__items:hover
+{
+	color: var(--base-color-dark);
+}
 .btn
 {
 	border: 2px solid var(--base-color-dark);
