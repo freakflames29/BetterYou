@@ -43,7 +43,11 @@
 					
 					<b>@<%= @user.username %></b>
 					<h2 class="dark-orange-color"><%= @user.name.capitalize %></h2> <br>
-					<p><i class="fa-solid fa-envelope"></i> <%= @user.email %></p><br>
+					<% if User.find(params[:id]).eql?(current_user) %>
+						<p><i class="fa-solid fa-envelope"></i> <%= @user.email %></p><br>
+
+						
+					<% end %>
 				<% else %>
 					<% if User.find(params[:id]).eql?(current_user) %>
 							<span class="badge small-badge">Your name is hidden</span>

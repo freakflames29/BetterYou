@@ -1,16 +1,16 @@
 <div class="users_container">
 	<% @users.each do |user| %>
 		
-	
+	<% ut=UserTask.where user:user %>
 	<div class="users">
 		<% if UserShowname.find_by(user:user).show_name %>
-			<p> <b class='basecolor'> @<%=user.username %> </b></p>
+			<p > <b class='underline basecolor'> @<%= link_to"#{ user.username}",user_path(user) %> </b></p>
 			<% else %>
 			<p> <b class='basecolor'> @Anonymous</b></p>
 			
 		<% end %>
-		<h2><%= user.tasks.last.task_name.capitalize %></h2>
-		<span class="small-badge badge status_badge"><%= UserTask.where(user:user).last.status %></span >
+		<h2><%= ut.last.task.task_name.capitalize %></h2>
+		<span class="small-badge badge status_badge"><%= ut.last.status %></span >
 	</div>
 
 	<% end %>
