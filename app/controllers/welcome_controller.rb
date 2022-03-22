@@ -14,7 +14,7 @@ class WelcomeController < ApplicationController
   def check_if_this_is_new_day
 
     task_list_of_user = UserTask.where user: current_user
-    if task_list_of_user.size >0 &&  task_list_of_user.last.updated_at.to_date < Time.now.to_date
+    if task_list_of_user.size >0 &&  task_list_of_user.last.created_at.to_date < Time.now.to_date
       gen_random_task
     end
 

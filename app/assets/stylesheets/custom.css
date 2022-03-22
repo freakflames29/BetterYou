@@ -405,3 +405,53 @@ td {
 {
 	margin-bottom: 15px;
 }
+.images_controller
+{
+	width: 100%;
+	margin: auto;
+	display: flex;
+	padding: 30px;
+	/*background-color: aliceblue;*/
+	flex-wrap: wrap;
+}
+.imagediv
+{
+	width: 25%;
+	padding: 20px;
+	/*background-color: red;*/
+	height: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/*border: 1px solid var(--base-color-dark);*/
+	/*border-radius: 10px;*/
+
+    /*box-shadow: 2px 5px 6px #0000001a;*/
+
+}
+.imagediv img 
+{
+	width: 200px;
+	margin-bottom: 15px;
+	border-radius: 15px;
+	    box-shadow: 2px 5px 6px #0000006e;
+
+}
+.imagediv h3
+{
+	text-transform: capitalize;
+	font-size: 20px;
+}
+.colororange
+{
+	color: var(--base-color-dark);
+
+}
+.imagediv h4
+{
+	color: var(--base-color-dark);
+	font-size: 25px;
+	margin-bottom: 15px;
+}

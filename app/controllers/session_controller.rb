@@ -7,7 +7,7 @@ class SessionController < ApplicationController
       @user=User.find_by username:params[:session][:username]
 
       if @user && @user.authenticate(params[:session][:password])
-        flash[:ok]='You are logged in!'
+        flash[:ok] ='You are logged in!'
         redirect_to @user
         session[:user_id]=@user.id
 

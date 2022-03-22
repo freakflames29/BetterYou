@@ -1,0 +1,15 @@
+<div class="images_controller">
+	<% @books.each do |book| %>
+		
+	<div class="imagediv">
+
+		<%= image_tag book.image_link %>
+		<h3><%= book.name %></h3>
+		<h4><i class="fa-solid fa-star colororange"></i> <%= book.points %></h4>
+		<% if logged_in? && @userpoint.to_i >=book.points.to_i %>
+			<span><%= link_to 'Download',book.download_link ,class:'btn',target:'_blank'%></span>
+			
+		<% end %>
+	</div>
+	<% end %>
+</div>

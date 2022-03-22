@@ -12,7 +12,7 @@
         <%= link_to 'Your Profile' ,current_user,class:'nav__elem__items' %>
       <% end %>
       <span class="nav__elem__items"><%= link_to 'Explore' ,explore_path,class:'nav__elem__items' %></span>
-      <span class="nav__elem__items">Books</span>
+      <span class="nav__elem__items"><%= link_to 'Books' ,books_path,class:'nav__elem__items' %></span>
       <%= link_to "Today's challenge",todayschallenge_path,class:'nav__elem__items' %>
       <% if logged_in? %>
         <span class="nav__elem__items btn"> <i class="fa-solid fa-star"></i> Points: <%= up.points %> </span>

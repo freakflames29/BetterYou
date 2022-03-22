@@ -20,4 +20,6 @@ Rails.application.routes.draw do
 
   post 'win',to:'task#win'
   post 'lose',to:'task#lose'
+
+  get 'books',to:'books#index'
 end

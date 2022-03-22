@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_20_171023) do
+ActiveRecord::Schema.define(version: 2022_03_22_125543) do
+
+  create_table "books", force: :cascade do |t|
+    t.string "name"
+    t.string "points", default: "20"
+    t.string "image_link"
+    t.string "download_link"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.string "task_name"
