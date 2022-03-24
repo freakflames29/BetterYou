@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   post 'lose',to:'task#lose'
 
   get 'books',to:'books#index'
+
+  get 'top',to:'topusers#top_users'
 end
