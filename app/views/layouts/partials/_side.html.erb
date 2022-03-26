@@ -1,0 +1,16 @@
+<% up=UserPoint.find_by user:current_user %>
+<div class="sidepanel">
+  <% if logged_in? %>
+   <span> <%= link_to 'Your Profile' ,current_user%></span>     
+  <% end %>
+  <span>Explore</span>
+  <span>Top Users</span>
+  <span>Books</span>
+  <span>Today's challenge</span>
+   <% if logged_in? %>
+        <span class="side btn"> <i class="fa-solid fa-star"></i> Points: <%= up.points %> </span>
+      <% else %>
+        <span class="side btn"><i class="fa-solid fa-user-plus"></i> <%= link_to 'Signup',signup_path %> </span>
+        <span class="side btn"><i class="fa-solid fa-lock"></i> <%= link_to 'Login',login_path %></span>
+  <% end %>
+</div>

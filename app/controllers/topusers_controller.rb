@@ -5,6 +5,6 @@ class TopusersController < ApplicationController
 		@users_points.each do |up|
 			@all_points << up.points.to_i
 		end
-		@all_points.sort!.reverse!
+		@all_points.sort!.reverse! 
 	end
 end

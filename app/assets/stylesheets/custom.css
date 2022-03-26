@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root
 {
@@ -21,11 +22,20 @@ a
 .container{
 	margin: 10px 15px;
 }
+.sidepanel
+{
+	display: none;
+}
+.mobile
+{
+	display:none;
+
+}
 nav
 {
 	position: sticky;
 	position: -webkit-sticky;
-	top: 0;
+	top: 0px;
 }
 .nav__container
 {
@@ -83,6 +93,11 @@ nav
 .submit{
 	margin-top: 10px;
 }
+.hero__container_mobile
+{
+	display: none;
+}
+
 .hero__container
 {
 	display: flex;

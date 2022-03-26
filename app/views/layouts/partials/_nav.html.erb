@@ -1,6 +1,7 @@
 <% up=UserPoint.find_by user:current_user %>
 
-<nav>
+
+<nav class="noshowmobile">
   <div class="nav__container">
     <div class="nav__logo">
       <h1>
@@ -24,3 +25,12 @@
     </div>
   </div>
 </nav>
+
+<div class="mobile">
+  <div class="navmobile_left">
+    <h1><%= link_to 'Better You',root_path %></h1>
+  </div>
+  <div class="navmobile_right">
+    <span class="mobile__icon"><i class="fa-solid fa-bars colororange"></i></span>
+  </div>
+</div>
