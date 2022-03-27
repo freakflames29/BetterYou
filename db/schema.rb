@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_22_125543) do
+ActiveRecord::Schema.define(version: 2022_03_27_124156) do
 
   create_table "books", force: :cascade do |t|
     t.string "name"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2022_03_22_125543) do
 
   create_table "user_points", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.string "points", default: "0"
+    t.integer "points", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_user_points_on_user_id"

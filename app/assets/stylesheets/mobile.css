@@ -208,4 +208,12 @@
 	{
 		font-size: 15px;
 	}
+	.top_users
+	{
+		width: 100%;
+	}
+	.users_with_points h2	
+	{
+		font-size: 17px;
+	}
 }
