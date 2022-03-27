@@ -13,6 +13,11 @@
 	box-sizing: border-box;
 	font-family: 'Inter',arial;
 	color: var(--black);
+
+}
+body
+{
+	background-color: #fffaf4;
 }
 a
 {
