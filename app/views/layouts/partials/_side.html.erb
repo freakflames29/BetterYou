@@ -1,5 +1,5 @@
 <% up=UserPoint.find_by user:current_user %>
-<div class="sidepanel">
+<div class="sidepanel hide" id="showside">
   <% if logged_in? %>
    <span> <%= link_to 'Your Profile' ,current_user%></span>     
   <% end %>

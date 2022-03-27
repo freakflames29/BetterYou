@@ -1,26 +1,23 @@
-// let showbtn=document.getElementById('show_button');
-// eve()
-// function eve()
-// {
-// 	showbtn.addEventListener('click',showtask)
-// }
-// function showtask()
-// {
-// 	let div=document.getElementById('taskdiv');
 
-// 	showbtn.classList.add('hidden');
-// 	div.classList.remove('hidden');
-// }
-
-// console.log('hi')
 console.log('hi')
+
+function showhide()
+{
+  console.log("hichki");
+}
+
+
 eve();
 
 function eve()
 {
+  console.log("jdskljdsakdjsakdjsakdsakldsjad")
 	document.querySelector("body > div.container > div.flash > span > i").addEventListener('click',close)
+  document.querySelector("#shwd").addEventListener('click',showhide)
 }
 
-  function close() {
+
+function close() {
     document.querySelector("body > div.container > div.flash").remove();
-  }
+}
+
