@@ -3,10 +3,10 @@
   <% if logged_in? %>
    <span> <%= link_to 'Your Profile' ,current_user%></span>     
   <% end %>
-  <span>Explore</span>
+  <span> <%= link_to "Explore",explore_path %> </span>
   <span>Top Users</span>
-  <span>Books</span>
-  <span>Today's challenge</span>
+  <span><%= link_to 'Books',books_path %></span>
+  <span> <%= link_to " Today's challenge",todayschallenge_path %></span>
    <% if logged_in? %>
         <span class="side btn"> <i class="fa-solid fa-star"></i> Points: <%= up.points %> </span>
       <% else %>

@@ -127,6 +127,11 @@ nav
 {
 	width: 100%;
 }
+.mtn
+{
+	margin-top: -40px;
+	margin-bottom: 40px;
+}
 .form__container
 {
 	margin: 50px 200px;
@@ -297,6 +302,7 @@ td {
     width: 80%;
     margin: auto;
     margin-top: 13px;
+    margin-bottom: 13px;
     display: flex;
     justify-content: space-between;
 }

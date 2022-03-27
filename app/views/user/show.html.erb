@@ -42,7 +42,7 @@
 				<% if @is_show_name.show_name %>
 					
 					<b>@<%= @user.username %></b>
-					<h2 class="dark-orange-color"><%= @user.name.capitalize %></h2> <br>
+					<h2 class="dark-orange-color" align="center"><%= @user.name.capitalize %></h2> <br>
 					<% if User.find(params[:id]).eql?(current_user) %>
 						<p><i class="fa-solid fa-envelope"></i> <%= @user.email %></p><br>
 
@@ -53,7 +53,7 @@
 							<span class="badge small-badge">Your name is hidden</span>
 
 							<b>@<%= @user.username %></b>
-							<h2 class="dark-orange-color"><%= @user.name.capitalize %></h2> <br>	
+							<h2 class="dark-orange-color" align="center"><%= @user.name.capitalize %></h2> <br>	
 							<p><i class="fa-solid fa-envelope"></i> <%= @user.email %></p><br>
 					<% else %>
 						<h2>Anonymous</h2>

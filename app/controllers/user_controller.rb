@@ -40,7 +40,7 @@ class UserController < ApplicationController
         if @user.save
           UserShowname.create! user:@user
           UserPoint.create! user:@user
-          flash[:ok].now = 'You are successfully signed up'
+          flash[:ok] = 'You are successfully signed up'
           redirect_to login_path
         end
       else

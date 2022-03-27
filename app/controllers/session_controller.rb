@@ -12,7 +12,7 @@ class SessionController < ApplicationController
         session[:user_id]=@user.id
 
       else
-        flash[:fail]='Wrong crendentials!'
+        flash.now[:fail]='Wrong crendentials!'
         render :new
       end
   end

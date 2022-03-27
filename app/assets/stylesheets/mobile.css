@@ -116,4 +116,96 @@
 		text-align: center;
 		font-size: 20px;
 	}
+	.login_container
+	{
+		margin: 50px auto;
+	}
+	.flash
+	{
+		padding: 10px;
+		width: 90%;
+	}
+	.images_controller
+	{
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	.imagediv
+	{
+		width: 50%;
+	}
+	.show__container
+	{
+		flex-direction: column;
+		margin: auto;
+		margin-left: -2em;
+
+	}
+	.show__left__section
+	{
+		margin-top: 15px;
+		width: 100%;
+		margin-left: -48px;
+		background-color: #fff;
+	}
+	.user_info_container
+	{
+		width: 100%;
+	}
+	.show__right__section{
+		margin-left: -26px;
+	}
+	.task_container
+	{
+		margin-top: 30px;
+	}
+	.task_container h1
+	{
+		font-size: 36px;
+		margin-bottom: 10px;
+		margin-top: 18px;
+		text-align: center;
+	}
+	.task_button
+	{
+		flex-direction: column;
+	}
+	.task_button .button
+	{
+		margin-bottom: 10px;
+	}
+	.task_container
+	{
+		width: 90%;
+	}
+	.users_container
+	{
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.users_container .users
+	{
+		width: 100%;
+		margin-left: -1px;
+	}
+	.errors__container
+	{
+		margin: 50px 10px;
+	}
+	.errors
+	{
+		padding: 8px 30px;
+	}
+	.errors__h1
+	{
+		font-size: 20px;
+	}
+	.errors h3
+	{
+		font-size: 15px;
+	}
 }
