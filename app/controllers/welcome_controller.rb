@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
   def gen_random_task
     # gentraate random no task from db and save it usertask
     random_number = rand(Task.count) + 1
-    task_is = Task.find random_number
+    task_is = Task.find random_number.to_i
     @challenge = UserTask.new user: current_user, task: task_is
     @challenge.save
   end
