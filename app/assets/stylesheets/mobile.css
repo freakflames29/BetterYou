@@ -98,7 +98,8 @@
 		text-transform: capitalize;
 		background-color: #fffaf4;
 		/*box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);*/
-		box-shadow: 11px 0 25px rgb(0 0 0 / 17%);
+		/*box-shadow: 11px 0 25px rgb(0 0 0 / 17%);*/
+		box-shadow: 11px 0 25px rgba(0,0, 0, 0.2);
 	}
 	.hide
 	{
