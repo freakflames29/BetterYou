@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
     @challenge.save
   end
 
-
+  
   def check_if_this_is_new_day
 
     task_list_of_user = UserTask.where user: current_user
