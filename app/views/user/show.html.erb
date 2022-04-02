@@ -34,9 +34,11 @@
 		<div class="user_info_container">
 
 			<% if @user.gender.eql?('MALE') %>
-				<%= image_tag 'boy.jpg',alt:'icon',class:'profile__img'	%>
+				<%= image_tag 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgT0q7HWxcwGcTfmS6xlTQi0rcohKrPAlP60u-eyqWzT5s0ZYGXMD4-JDujXVBUmEFVWY-kC2O4j1IuMTGN30xU8Rcv9U47gFLTux5zHkx4m5F8XDrmpscJYFE7uL8Mkofg434cn0htTM1Uvaxeiq611nbNch_qLBgi5oXAw9U8_98-p5EnyOckJ2Ll/s16000/boy.jpg',alt:'icon',class:'profile__img'	%>
+
 				<% else %>
-				<%= image_tag 'girl.jpg',alt:'icon',class:'profile__img'	%>
+				
+				<%= image_tag 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0HxmeJq7QqzYr6hJjdtPbz-E4ayQaZ_BJZ0yGenLZYq42FXt8qaiGdz78iYCacPv3lTSBzzpWHHeTNF537WO9ewXss6STYW6ms7xrqtzF0G476dOK9A1VCob39cqhuX_cLSRO6mRXYVdDIa3vWwwpqW7yMyxrHGwca0FvLyNy5ZVhddisaVZHgVbs/s16000/girl.jpg',alt:'icon',class:'profile__img'	%>
 				
 			<% end %>
 				<% if @is_show_name.show_name %>
