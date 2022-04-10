@@ -41,23 +41,15 @@
 # 	u.delete
 # end
 
-Book.create! name:'the alchemist',download_link:'https://drive.google.com/file/d/1GaacRWCvvA_NOJpTfJXSMv95Wmh1zZpv/view?usp=sharing',image_link:'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1466865542l/18144590._SY475_.jpg'
-
-Book.create! name:'Sapiens A Brief History of Humankind by Yuval Noah Harari',download_link:'https://drive.google.com/file/d/1r0DXVtYcwKyas2CFuXVHNtBkqFwi7j2E/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/41+lolL22gL.jpg',points:'40'
-
-Book.create! name:'web hacking 101',download_link:'https://drive.google.com/file/d/1SB8GY1E7QP7RvoPGkwTyrovZeiBQvScN/view?usp=sharing',image_link:'https://imgproxy.pdfroom.com/f_-4duxH_1Wx7pbCuwmYyI20k3VKFRMBFQ6VwNwzf-c/rs:auto:200:276:1/g:no/RTFkNERPNnlkT2IucG5n.jpg',points:'50'
-
-Book.create! name:'Rework',download_link:'https://drive.google.com/file/d/1pXs2UaC00V1bLX4Wiy0_fhG-5qTiPO71/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/61GFc+k-5PL.jpg',points:'30'
-
-Book.create! name:'Chanakya in Daily Life',download_link:'https://drive.google.com/file/d/1csSDFTvM4kyyzh2PKxGVNVfFX0L1tsEa/view?usp=sharing',image_link:'https://m.media-amazon.com/images/I/51X2JSWajAL._AC_SY580_.jpg',points:'40'
-
-Book.create! name:'Quiet The Power of Introverts',download_link:'https://drive.google.com/file/d/18oWWz4wuY6ORRhTAi1xQcMhskixaTCN7/view?usp=sharing',image_link:'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328562861l/8520610.jpg',points:'60'
-
-Book.create! name:'Range',download_link:'https://drive.google.com/file/d/1DNLud-Z1er8zo-zey921_VnrML3pfLeh/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/7176ym1cKkL.jpg',points:'50'
 
 
-Book.create! name:'The Secret Diary of Adrian Mole',download_link:'https://drive.google.com/file/d/1dNa-SnhrFu7aZOlZ4c39MthEG6myAvDK/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/81J8SaDL7jL.jpg',points:'40'
+Book.create! name:'The Sun and Her Flowers',download_link:'https://drive.google.com/file/d/1rLkv8iH2MRRHCFIwBvL1ASNtM_AljGUf/view?usp=sharing',image_link:'https://m.media-amazon.com/images/I/412HlyX42zL.jpg',points:'30'
 
+Book.create! name:'The Midnight Library',download_link:'https://drive.google.com/file/d/1sZ4tEOQ8RXJZ0VdTCfgApp-K8l7e2sel/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/718GcuXHXbL.jpg',points:'50'
 
-Book.create! name:'Steal Like an Artist',download_link:'https://drive.google.com/file/d/1eSu1Rf8YlD7NpFOBYZh1lIXlA1w7B3x9/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/617JBhF7XcL.jpg',points:'40'
+Book.create! name:'How to Not Die Alone',download_link:'https://drive.google.com/file/d/13ij1EMORsr1K1qsmzVOBMwDjcSZaCf82/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/71FjFvP1rRL.jpg',points:'40'
+
+Book.create! name:'diary of a wimpy kid rodrick rules',download_link:'https://drive.google.com/file/d/17qSpyLDznsuksIZNHGweI76G5lUy8ZCk/view?usp=sharing',image_link:'https://upload.wikimedia.org/wikipedia/en/8/80/Diary_of_a_Wimpy_Kid_Rodrick_Rules_book_cover.png',points:'20'
+
+Book.create! name:'The Pursuit of Happyness',download_link:'https://drive.google.com/file/d/1RAjXOCpNy7JStq_zsE_a5MqkJhWPWcyB/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/51-a5oIljlL._SX329_BO1,204,203,200_.jpg',points:'70'
 
