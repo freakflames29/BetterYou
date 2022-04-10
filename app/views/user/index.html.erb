@@ -8,11 +8,11 @@
         <% else %>
           <p> <b class='basecolor'> @Anonymous</b></p>
         <% end %>
-        <% if ut %>
+        <% if ut.size>0 %>
         	
 		    <h2><%= ut.last.task.task_name.capitalize %></h2>
 		    <span class="small-badge badge status_badge"><%= ut.last.status %></span >
-		    <% else %>
+		 <% else %>
 		    <h2>No challenge</h2>
         <% end %>
       </div>
