@@ -41,13 +41,13 @@
 # 	u.delete
 # end
 
-# Book.create! name:'the alchemist',download_link:'https://drive.google.com/file/d/1GaacRWCvvA_NOJpTfJXSMv95Wmh1zZpv/view?usp=sharing',image_link:'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1466865542l/18144590._SY475_.jpg'
+Book.create! name:'the alchemist',download_link:'https://drive.google.com/file/d/1GaacRWCvvA_NOJpTfJXSMv95Wmh1zZpv/view?usp=sharing',image_link:'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1466865542l/18144590._SY475_.jpg'
 
-# Book.create! name:'Sapiens A Brief History of Humankind by Yuval Noah Harari',download_link:'https://drive.google.com/file/d/1r0DXVtYcwKyas2CFuXVHNtBkqFwi7j2E/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/41+lolL22gL.jpg',points:'40'
+Book.create! name:'Sapiens A Brief History of Humankind by Yuval Noah Harari',download_link:'https://drive.google.com/file/d/1r0DXVtYcwKyas2CFuXVHNtBkqFwi7j2E/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/41+lolL22gL.jpg',points:'40'
 
-# Book.create! name:'web hacking 101',download_link:'https://drive.google.com/file/d/1SB8GY1E7QP7RvoPGkwTyrovZeiBQvScN/view?usp=sharing',image_link:'https://imgproxy.pdfroom.com/f_-4duxH_1Wx7pbCuwmYyI20k3VKFRMBFQ6VwNwzf-c/rs:auto:200:276:1/g:no/RTFkNERPNnlkT2IucG5n.jpg',points:'50'
+Book.create! name:'web hacking 101',download_link:'https://drive.google.com/file/d/1SB8GY1E7QP7RvoPGkwTyrovZeiBQvScN/view?usp=sharing',image_link:'https://imgproxy.pdfroom.com/f_-4duxH_1Wx7pbCuwmYyI20k3VKFRMBFQ6VwNwzf-c/rs:auto:200:276:1/g:no/RTFkNERPNnlkT2IucG5n.jpg',points:'50'
 
-# Book.create! name:'Rework',download_link:'https://drive.google.com/file/d/1pXs2UaC00V1bLX4Wiy0_fhG-5qTiPO71/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/61GFc+k-5PL.jpg',points:'30'
+Book.create! name:'Rework',download_link:'https://drive.google.com/file/d/1pXs2UaC00V1bLX4Wiy0_fhG-5qTiPO71/view?usp=sharing',image_link:'https://images-na.ssl-images-amazon.com/images/I/61GFc+k-5PL.jpg',points:'30'
 
 Book.create! name:'Chanakya in Daily Life',download_link:'https://drive.google.com/file/d/1csSDFTvM4kyyzh2PKxGVNVfFX0L1tsEa/view?usp=sharing',image_link:'https://m.media-amazon.com/images/I/51X2JSWajAL._AC_SY580_.jpg',points:'40'
 
