@@ -152,6 +152,10 @@
 	{
 		width: 100%;
 	}
+	.user_info_container p 
+	{
+		font-size: 15px;
+	}
 	.show__right__section{
 		margin: auto;
 		margin-bottom: 25px;
