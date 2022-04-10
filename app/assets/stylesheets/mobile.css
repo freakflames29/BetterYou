@@ -137,14 +137,15 @@
 	{
 		flex-direction: column;
 		margin: auto;
-		margin-left: -2em;
+		/*margin-left: -2em;*/
+		padding: 0;
 
 	}
 	.show__left__section
 	{
 		margin-top: 15px;
 		width: 100%;
-		margin-left: -48px;
+		margin: auto;
 		background-color: #fff;
 	}
 	.user_info_container
@@ -152,7 +153,9 @@
 		width: 100%;
 	}
 	.show__right__section{
-		margin-left: -26px;
+		margin: auto;
+		margin-bottom: 25px;
+		margin-top: 25px;
 	}
 	.task_container
 	{
