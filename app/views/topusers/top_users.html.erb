@@ -8,25 +8,28 @@
 			
 		<% @users_points.each_with_index do |up,index| %>
 				
-		<div class="users_with_points">
+				<% if up.points > 0 %>
+					
+			<div class="users_with_points">
 
-			<% us = UserShowname.find_by(user_id:up.user_id) %>
-			<% if us.show_name %>
+				<% us = UserShowname.find_by(user_id:up.user_id) %>
+				<% if us.show_name %>
+					
+				<h2><%= index+1 %>. @<%= link_to up.user.username,user_path(up.user) %></h2>
+				<% else %>
+
+					<h2><%= index+1 %>. @Anonymous</h2>
+
+				<% end %>
+
+				<span class="badge-btn badge">
+						<i class="fa-solid fa-star dark-orange-color"></i> <%= up.points %>
+					
+				</span>
 				
-			<h2><%= index+1 %>. @<%= link_to up.user.username,user_path(up.user) %></h2>
-			<% else %>
-
-				<h2><%= index+1 %>. @Anonymous</h2>
-
+			</div>
+					
 			<% end %>
-
-			<span class="badge-btn badge">
-					<i class="fa-solid fa-star dark-orange-color"></i> <%= up.points %>
-				
-			</span>
-			
-		</div>
-			
 		<% end %>
 
 	</div>
